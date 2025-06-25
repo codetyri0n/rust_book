@@ -4,5 +4,5 @@ fn main() {
     println!("The value of c is : {c}");
 
     c = 10;
-    println!("The changed value of c is : {c}");
+    println!("The changed value of c is, {c}");
 }
