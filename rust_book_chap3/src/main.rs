@@ -7,4 +7,7 @@ fn main() {
         println!("The value of x at the inner scope is : {x}");
     }
     println!("The value of x is : {x}");
+
+    let bruh = -34 / 3;
+    println!("Bruhh : {bruh}");
 }
