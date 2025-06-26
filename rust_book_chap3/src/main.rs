@@ -1,8 +1,10 @@
 fn main() {
-    println!("Hello, world!");
-    let mut c = 5;
-    println!("The value of c is : {c}");
+    let x = 6;
+    let x = x + 1;
 
-    c = 10;
-    println!("The changed value of c is, {c}");
+    {
+        let x = x * 2;
+        println!("The value of x at the inner scope is : {x}");
+    }
+    println!("The value of x is : {x}");
 }
