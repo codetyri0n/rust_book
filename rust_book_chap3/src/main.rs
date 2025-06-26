@@ -10,4 +10,8 @@ fn main() {
 
     let bruh = -34 / 3;
     println!("Bruhh : {bruh}");
+
+    let tup = (34, true, "scar");
+    let (x, y, z) = tup;
+    println!("{x}, {y}, {z}");
 }
