@@ -1,16 +1,25 @@
 use std::io;
 
 fn main() {
-    println!("Enter the temperature in celsius : ");
-    let mut celsius = String::new();
+    println!("Enter the number for calculation :");
+    let mut a = String::new();
+    io::stdin().read_line(&mut a).expect("Enter valid input");
 
-    io::stdin()
-        .read_line(&mut celsius)
-        .expect("Failed to get the celsius input");
+    let input: i32 = a.trim().parse().expect("Enter a valid number");
 
-    let number: f32 = celsius.trim().parse().expect("Please enter a valid number");
+    println!(
+        "The Fibonacci computation for {} is: {}",
+        input,
+        fibonacci(input)
+    );
+}
 
-    let result = number * 9.0 / 5.0 + 32.0;
-
-    println!("The result in fahrenheit is {result} F");
+fn fibonacci(x: i32) -> i32 {
+    if x == 0 {
+        0
+    } else if x == 1 {
+        1
+    } else {
+        fibonacci(x - 1) + fibonacci(x - 2)
+    }
 }
