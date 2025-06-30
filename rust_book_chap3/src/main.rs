@@ -30,4 +30,24 @@ fn main() {
     let element = arr[index];
 
     println!("The number at the specified index is : {element}");
+
+    another_function(5);
+
+    let y = foo();
+    println!("Fooo {y}");
+
+    println!("{}", plus_one(3));
+}
+
+fn another_function(x: i32) {
+    println!("Gimme {x} chocolates.");
+}
+
+fn foo() -> i32 {
+    555
+}
+
+fn plus_one(mut x: i32) -> i32 {
+    x = x + 1;
+    return x;
 }
